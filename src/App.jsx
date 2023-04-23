@@ -1,6 +1,8 @@
 import { useState } from "react";
 import Header from "./components/Header";
 import Button from "./components/Button";
+import { formatearDinero } from "./helpers";
+
 
 function App() {
 
@@ -56,7 +58,7 @@ function App() {
                 value={amount}
             />
 
-            <p className="text-center my-10 text-5xl font-extrabold text-teal-600">{amount} <span className="text-gray-500">USD</span></p>
+            <p className="text-center my-10 text-5xl font-extrabold text-teal-600">{ formatearDinero(amount)} <span className="text-gray-500">USD</span></p>
 
 
 
