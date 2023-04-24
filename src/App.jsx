@@ -1,13 +1,19 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Header from "./components/Header";
 import Button from "./components/Button";
-import { formatearDinero } from "./helpers";
+import { formatearDinero, calcularTotal } from "./helpers";
 
 
 function App() {
 
     const [amount, setAmount] = useState(10000);
     const [month, setMonth] = useState(6);
+    const [total, setTotal] = useState(0);
+
+    useEffect(() => {
+        const resultTotal = calcularTotal(amount, month);
+        setTotal(resultTotal);
+    }, [amount, month])
 
     const MIN = 0;
     const MAX = 20000;
@@ -76,6 +82,17 @@ function App() {
                 <option value="12">12 Meses</option>
                 <option value="24">24 Meses</option>
             </select>
+
+            <div className="my-5 space-y-3 bg-gray-100 p-5">
+                <h2 className="text-2xl font-extrabold text-gray-500 text-center">
+                    Resumen <span className="text-teal-600">de pagos</span>
+                </h2>
+
+                <p className="text-xl text-gray-500 text-center font-bold">{month} Meses</p>
+                <p className="text-xl text-gray-500 text-center font-bold">{formatearDinero(total)} Total a Pagar</p>
+                <p className="text-xl text-gray-500 text-center font-bold">Mensuales</p>
+
+            </div>
 
         </div>
     )
