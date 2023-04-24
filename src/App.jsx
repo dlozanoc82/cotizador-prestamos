@@ -7,6 +7,7 @@ import { formatearDinero } from "./helpers";
 function App() {
 
     const [amount, setAmount] = useState(10000);
+    const [month, setMonth] = useState(6);
 
     const MIN = 0;
     const MAX = 20000;
@@ -58,9 +59,23 @@ function App() {
                 value={amount}
             />
 
-            <p className="text-center my-10 text-5xl font-extrabold text-teal-600">{ formatearDinero(amount)} <span className="text-gray-500">USD</span></p>
+            <p className="text-center my-10 text-5xl font-extrabold text-teal-600">
+                {formatearDinero(amount)} <span className="text-gray-500">USD</span>
+            </p>
 
+            <h2 className="text-2xl font-extrabold text-gray-500 text-center">
+                Elige un <span className="text-teal-600">Plazo</span> a Pagar
+            </h2>
 
+            <select 
+                className="mt-5 w-full p-2 bg-white border border-gray-300 rounded-lg text-center text-xl font-bold outline-none text-gray-500"
+                value={month}
+                onChange={e => setMonth(+e.target.value)}
+            >
+                <option value="6">6 Meses</option>
+                <option value="12">12 Meses</option>
+                <option value="24">24 Meses</option>
+            </select>
 
         </div>
     )
