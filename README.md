@@ -45,7 +45,6 @@ npm run dev
 ## Uso
 1. Selecciona el monto del préstamo en la casilla correspondiente.
 2. Selecciona el plazo de pago deseado en años o meses.
-3. Haz clic en el botón "Calcular".
 4. La aplicación calculará automáticamente el monto total a pagar, el interés y las cuotas.
 5. La información detallada del préstamo se mostrará en pantalla.
 
