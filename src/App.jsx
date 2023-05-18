@@ -70,16 +70,16 @@ function App() {
                 value={amount}
             />
 
-            <p className="text-center my-10 text-5xl font-extrabold text-teal-600">
+            <p className="text-center my-10 text-4xl sm:text-5xl font-extrabold text-teal-600">
                 {formatearDinero(amount)} <span className="text-gray-500">USD</span>
             </p>
 
-            <h2 className="text-2xl font-extrabold text-gray-500 text-center">
+            <h2 className="text-xl sm:text-2xl font-extrabold text-gray-500 text-center">
                 Elige un <span className="text-teal-600">Plazo</span> a Pagar
             </h2>
 
             <select 
-                className="mt-5 w-full p-2 bg-white border border-gray-300 rounded-lg text-center text-xl font-bold outline-none text-gray-500"
+                className="mt-5 w-full p-2 bg-white border border-gray-300 rounded-lg text-center text-lg sm:text-xl font-bold outline-none text-gray-500"
                 value={month}
                 onChange={e => setMonth(+e.target.value)}
             >
@@ -89,13 +89,13 @@ function App() {
             </select>
 
             <div className="my-5 space-y-3 bg-gray-100 p-5">
-                <h2 className="text-2xl font-extrabold text-gray-500 text-center">
+                <h2 className="text-xl sm:text-2xl font-extrabold text-gray-500 text-center">
                     Resumen <span className="text-teal-600">de pagos</span>
                 </h2>
 
-                <p className="text-xl text-gray-500 text-center font-bold">{month} Meses</p>
-                <p className="text-xl text-gray-500 text-center font-bold">{formatearDinero(total)} Total a Pagar</p>
-                <p className="text-xl text-gray-500 text-center font-bold">{formatearDinero(pay)} Mensuales</p>
+                <p className="text-lg sm:text-xl text-gray-500 text-center font-bold">{month} Meses</p>
+                <p className="text-lg sm:text-xl text-gray-500 text-center font-bold">{formatearDinero(total)} Total a Pagar</p>
+                <p className="text-lg sm:text-xl text-gray-500 text-center font-bold">{formatearDinero(pay)} Mensuales</p>
 
             </div>
 

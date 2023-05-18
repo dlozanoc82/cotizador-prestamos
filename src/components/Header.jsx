@@ -1,7 +1,7 @@
 
 const Header = () => {
     return (
-        <h1 className="text-4xl font-extrabold text-gray-500 text-center">
+        <h1 className="text-3xl sm:text-4xl font-extrabold text-gray-500 text-center">
                 ¿Cuanto <span className="text-teal-600">dinero</span> necesitas?
         </h1>
     )
